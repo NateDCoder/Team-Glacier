@@ -57,4 +57,20 @@ Both live on `MachineSystem`. `MachineSystem` holds one `Machine` (multiplicity 
 
 ## UML changes made in `Project2_items7-9.vpp`
 
-See the checklist at the bottom of this file once the edit is finished.
+Everything else in the diagram is unchanged from `project2updated.vpp`.
+
+| Class or link | Change | Item |
+|---|---|---|
+| Component | Generalization to Polygon removed; composition `Component 1 — 1 Polygon` (role `polygon`) added | 7, 8 |
+| Component | `rotation` attribute removed; `Advance(delta)` renamed `SetTime(time)`; `SetRotation(rotation)` added | 7, 9 |
+| Motor | `rotation` attribute and `Advance` removed (`SetTime` and `Reset` already there) | 7, 9 |
+| Motor – Polygon | Existing composition's roles named `motor` and `body`: the second polygon | 8 |
+| Pulley | `sinkRotation`, `sourceRotation`, `SetSinkRotation` and `SetSourceRotationRotation` removed; `SetRotation(rotation)` override added | 7 |
+| SnowBlower | `SetRotation`, `SetTime`, `Reset`, `outputRate` and `lastTime` added | 7, 9 |
+| Machine | `Reset()` added | 9 |
+| MachineSystem | `mFrame` and `mResourcesDir` added | 9 |
+| MachineSystem – Machine | Multiplicity `*` changed to `1`, role renamed `machine` (never two machines in memory) | 9 |
+
+Not touched (other TA items): MachineDialog connections, the factory inheritance, Belt, empty classes, source/sink wording and the CanadianExperience package split.
+
+The file was edited as data, not in the Visual Paradigm app. It passes SQLite and reference checks, but it has not been opened in Visual Paradigm yet. If a connector looks misplaced, drag it. If the file does not open, use `project2updated.vpp`.
